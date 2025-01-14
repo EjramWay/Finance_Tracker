@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.transaction-add{
+    position: absolute;
+    padding: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+}
+
+input {
+    border: none;
+    background-color: #f1f1f1;
+    border-radius: 2px;
+    padding: 8px 12px;
+    width: 449px;
+}
+
+input:hover {
+    background-color: rgba(241, 241, 241, 0.5);
+    cursor: pointer;
+}
+
+#submit-transaction {
+margin-top: 7%;
+padding: 9px 12px;
+background-color: #7155F1;
+color: white;
+border: none;
+border-radius: 2px;
+font-size: 14px;
+}
+
+#submit-transaction:hover {
+    background-color: rgba(113, 85, 241,0.9);
+    cursor: pointer;
+}

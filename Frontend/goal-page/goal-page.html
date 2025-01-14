@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../home-header.css">
+    <link rel="stylesheet" href="goal-page.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+          <a href="/" class="logo-link">
+            <img class="logo-image" src="Logos/download (1).png" alt="logo">
+          </a>
+        </div>
+    
+        <nav class="nav-bar">
+          <ul class="nav-links">
+            <li><a href="home.html">Accounts</a></li>
+            <li><a href="#">Transactions</a></li>
+            <li><a href="#">Goals</a></li>
+          </ul>
+    
+    <a href="../transaction-page\transaction-add-page.html"><button id="transaction">+ Transaction</button></a>
+    
+          <button id="profile-btn" class="profile-btn">
+            <img src="SVGimages/profile-circle.svg" alt="profile-picture">
+          </button>
+    
+          <div id="nav-link-profile" class="nav-link-profile">
+            <ul class="profile-menu" id="profile-menu">
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">Settings</a></li>
+              <li class="logout"><a href="#">Logout</a></li>
+            </ul>
+          </div>
+    
+          <button id="dropdown" class="dropdown-btn">
+            <img src="SVGimages/list (1).svg" alt="dropdown">
+          </button>
+          <ul class="dropdown-menu" id="dropdown-menu">
+            <li><a href="home.html">Accounts</a></li>
+            <li><a href="#">Transactions</a></li>
+            <li><a href="#">Goals</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+<section class="goal">
+<div class="goal-parent">
+<div class="title-goal">
+  <h1 class="title-goal-h1">Goals</h1>
+  <h4 class="title-desc">Represents information about Personal Goals</h4>
+</div>
+<div class="account-search">
+  <img src="../SVGimages/search.svg" alt="Search Icon" class="search-icon">
+  <input 
+    type="search" 
+    id="search-account" 
+    class="search-account"  
+    placeholder="Type here to search"
+  >
+  <a href="../goal-page/goal-create.css"><button id="goal-create">Create Goal</button></a>
+</div>
+
+
+</div>
+
+
+<template id="goal-card-template">
+
+<div class="goal-card">
+
+<h4 class="goal-name">Goal Name</h3>
+<h2 class="goal-name-act">Vacation Fund</h2>
+
+<h4 class="description-goal">Description</h4>
+<h2 class="description-goal-act">Save For Family Vacation</h2>
+
+<h4 class="goal-target"></h4>
+<h2 class="goal-target-value"></h2>
+
+</div>
+</template>
+
+
+
+
+</div>
+</section>
+
+
+<script src="goal-page-card.js"></script>
+
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Left Diamond with Icon -->
+  <g transform="translate(0, 0) scale(0.7)">
+    <path d="M150 20 L270 150 L150 280 L30 150 Z" 
+          fill="white" 
+          stroke="#000" 
+          stroke-width="8"/>
+    
+    <!-- Central Arrow -->
+    <path d="M150 60 L150 240" 
+          stroke="#000" 
+          stroke-width="12"
+          stroke-linecap="round"/>
+    <path d="M150 60 L120 90 M150 60 L180 90" 
+          stroke="#000" 
+          stroke-width="12"
+          stroke-linecap="round"/>
+    
+    <!-- Radiating Lines -->
+    <g stroke="#000" stroke-width="8" stroke-linecap="round">
+      <line x1="90" y1="90" x2="70" y2="70"/>
+      <line x1="210" y1="90" x2="230" y2="70"/>
+      <line x1="90" y1="210" x2="70" y2="230"/>
+      <line x1="210" y1="210" x2="230" y2="230"/>
+    </g>
+  </g>
+  
+  <!-- Text -->
+  <text x="300" y="120" 
+        font-family="Arial Black, sans-serif" 
+        font-size="72" 
+        text-anchor="middle" 
+        font-weight="bold">
+    FINANCE
+  </text>
+</svg>

@@ -1,0 +1,21 @@
+.welcome {
+    color: white;
+    position: relative;
+    height: auto;
+    width: 100%;
+    padding: 96px 8px;
+    background-color: rgb(0, 0, 0);
+    z-index: -1;
+
+}
+
+h1 {
+    margin: 8px;
+    font-size: clamp(3rem, 3rem + 0vw, 3rem);
+}
+
+p {
+    margin: 16px;
+    font-size: clamp(1rem, 1rem + 0vw, 1rem);
+}
+

@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.parent-goal-create {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+   
+.title-create {
+    display: flex;
+    justify-content: center;
+    font-size: 1.75rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.title-desc-create {
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    color: #666;
+    font-weight: 400;
+    text-align: center;
+}
+
+.transaction-add {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    justify-content: center;
+    width: 100%;
+    max-width: 449px;
+}
+
+input {
+    border: none;
+    background-color: #f1f1f1;
+    border-radius: 2px;
+    padding: 8px 12px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input:hover {
+    background-color: rgba(241, 241, 241, 0.5);
+    cursor: pointer;
+}
+
+#submit-transaction {
+    margin-top: 5%;
+    padding: 9px 12px;
+    width: 100%;
+    background-color: #7155F1;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#submit-transaction:hover {
+    background-color: rgba(113, 85, 241,0.9);
+    cursor: pointer;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .parent-goal-create {
+        padding: 1rem 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .parent-goal-create {
+        padding: 1rem 15rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .parent-goal-create {
+        padding: 1rem;
+    }
+    
+    .title-create {
+        font-size: 1.5rem;
+    }
+    
+    .title-desc-create {
+        font-size: 0.9rem;
+    }
+    
+    .transaction-add {
+        width: 90%;
+    }
+}

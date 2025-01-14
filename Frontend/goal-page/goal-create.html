@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../goal-page\goal-create.css">
+    <link rel="stylesheet" href="../home-header.css">
+
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+          <a href="/" class="logo-link">
+            <img class="logo-image" src="Logos/download (1).png" alt="logo">
+          </a>
+        </div>
+    
+        <nav class="nav-bar">
+          <ul class="nav-links">
+            <li><a href="home.html">Accounts</a></li>
+            <li><a href="#">Transactions</a></li>
+            <li><a href="#">Goals</a></li>
+          </ul>
+    
+    <a href="../transaction-page\transaction-add-page.html"><button id="transaction">+ Transaction</button></a>
+    
+          <button id="profile-btn" class="profile-btn">
+            <img src="SVGimages/profile-circle.svg" alt="profile-picture">
+          </button>
+    
+          <div id="nav-link-profile" class="nav-link-profile">
+            <ul class="profile-menu" id="profile-menu">
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">Settings</a></li>
+              <li class="logout"><a href="#">Logout</a></li>
+            </ul>
+          </div>
+    
+          <button id="dropdown" class="dropdown-btn">
+            <img src="SVGimages/list (1).svg" alt="dropdown">
+          </button>
+          <ul class="dropdown-menu" id="dropdown-menu">
+            <li><a href="home.html">Accounts</a></li>
+            <li><a href="#">Transactions</a></li>
+            <li><a href="#">Goals</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+    <section class="create-goal">
+      <div class="parent-goal-create">  
+<h1 class="title-create">Create Goal</h1>
+<h4 class="title-desc-create">Input Your Info So It Displays in the Goal section</h2>   
+
+    <section class="transaction-add">
+    <h5>Goal Name</h5>
+    <input type="text" id="description-input" required>
+    
+    <h5>Description</h5>
+    <input type="text" id="account-input" required>
+    
+    <h5>Target Amount</h5>
+    <input type="text" id="reminder-input" required>
+
+    <h5>Current Amount</h5>
+    <input type="text" id="reminder-input" required>
+
+    <h5>Due Date</h5>
+    <input type="date" placeholder="Enter The Date" id="date-input" required>
+    
+    <button type="submit" id="submit-transaction">Submit</button>
+
+
+</section>
+
+</div> 
+    </section>
+    
+</body>
+</html>

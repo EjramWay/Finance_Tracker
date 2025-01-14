@@ -1,0 +1,41 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Diamond -->
+  <path d="M150 20 L270 150 L150 280 L30 150 Z" 
+        fill="white" 
+        stroke="#000" 
+        stroke-width="8"/>
+  
+  <!-- Inner Border Diamond -->
+  <path d="M150 40 L250 150 L150 260 L50 150 Z" 
+        fill="none" 
+        stroke="#000" 
+        stroke-width="4"
+        stroke-dasharray="12"/>
+  
+  <!-- Central Arrow -->
+  <path d="M150 60 L150 240" 
+        stroke="#000" 
+        stroke-width="12"
+        stroke-linecap="round"/>
+  <path d="M150 60 L120 90 M150 60 L180 90" 
+        stroke="#000" 
+        stroke-width="12"
+        stroke-linecap="round"/>
+  
+  <!-- Radiating Lines -->
+  <g stroke="#000" stroke-width="8" stroke-linecap="round">
+    <line x1="90" y1="90" x2="70" y2="70"/>
+    <line x1="210" y1="90" x2="230" y2="70"/>
+    <line x1="90" y1="210" x2="70" y2="230"/>
+    <line x1="210" y1="210" x2="230" y2="230"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="150" y="160" 
+        font-family="Arial Black, sans-serif" 
+        font-size="36" 
+        text-anchor="middle" 
+        font-weight="bold">
+    FINANCE
+  </text>
+</svg>

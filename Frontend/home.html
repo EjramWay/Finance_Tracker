@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="home-header.css">
+  <link rel="stylesheet" href="welcome.css">
+  <link rel="stylesheet" href="Account-section.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <a href="/" class="logo-link">
+        <img class="logo-image" src="Logos/download (1).png" alt="logo">
+      </a>
+    </div>
+
+    <nav class="nav-bar">
+      <ul class="nav-links">
+        <li><a href="home.html">Accounts</a></li>
+        <li><a href="#">Transactions</a></li>
+        <li><a href="#">Goals</a></li>
+      </ul>
+
+<a href="../transaction-page\transaction-add-page.html"><button id="transaction">+ Transaction</button></a>
+
+      <button id="profile-btn" class="profile-btn">
+        <img src="SVGimages/profile-circle.svg" alt="profile-picture">
+      </button>
+
+      <div id="nav-link-profile" class="nav-link-profile">
+        <ul class="profile-menu" id="profile-menu">
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Settings</a></li>
+          <li class="logout"><a href="#">Logout</a></li>
+        </ul>
+      </div>
+
+      <button id="dropdown" class="dropdown-btn">
+        <img src="SVGimages/list (1).svg" alt="dropdown">
+      </button>
+      <ul class="dropdown-menu" id="dropdown-menu">
+        <li><a href="home.html">Accounts</a></li>
+        <li><a href="#">Transactions</a></li>
+        <li><a href="#">Goals</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="welcome" id="welcome">
+    <h1>Welcome to <br> the Home Page</h1>
+    <p>Track, categorize, and plan your finances effortlessly in one place</p>
+  </div>
+
+
+
+  <section class="account-section">
+    <div class="account-header">
+      <div class="title-group">
+        <h1 class="account-section-title">Accounts</h1>
+        <h2 class="account-section-subtitle">Represents information about Accounts</h2>
+      </div>
+      <div class="account-search">
+        <img src="SVGimages/search.svg" alt="Search Icon" class="search-icon">
+        <input 
+          type="search" 
+          id="search-account" 
+          class="search-account"  
+          placeholder="Type here to search"
+        >
+      </div>
+    </div>
+
+    <div class="parent-account">
+  
+    <div class="accounts-grid">
+      <div class="account-card">
+        <div class="account-details">
+          <div class="account-details-item">
+            <h4 class="detail-label">Account Name</h4>
+            <h3 class="detail-value" >Savings Account</h3>
+          </div>
+          <div class="account-details-item">
+            <h4 class="detail-label">Type</h4>
+            <p class="detail-value">Saving</p>
+          </div>
+          <div class="account-details-item">
+            <h4 class="detail-label">Balance</h4>
+            <p class="detail-value" contenteditable="true">$ 0.00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accounts-grid">
+      <div class="account-card">
+        <div class="account-details">
+          <div class="account-details-item">
+            <h4 class="detail-label">Account Name</h4>
+            <h3 class="detail-value">Checking Account</h3>
+          </div>
+          <div class="account-details-item">
+            <h4 class="detail-label">Type</h4>
+            <p class="detail-value">Checking</p>
+          </div>
+          <div class="account-details-item">
+            <h4 class="detail-label">Balance</h4>
+            <p class="detail-value" contenteditable="true">$ 0.00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accounts-grid">
+      <div class="account-card">
+        <div class="account-details">
+          <div class="account-details-item">
+            <h4 class="detail-label">Account Name</h4>
+            <h3 class="detail-value">Investment Account</h3>
+          </div>
+          <div class="account-details-item">
+            <h4 class="detail-label">Type</h4>
+            <p class="detail-value">Investment</p>
+          </div>
+          <div class="account-details-item">
+            <h4 class="detail-label">Balance</h4>
+            <p class="detail-value" contenteditable="true">$ 0.00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accounts-grid">
+      <div class="account-card">
+        <div class="account-details">
+          <div class="account-details-item">
+            <h4 class="detail-label">Account Name</h4>
+            <h3 class="detail-value">Credit Card</h3>
+          </div>
+          <div class="account-details-item">
+            <h4 class="detail-label">Type</h4>
+            <p class="detail-value">Credit</p>
+          </div>
+          <div class="account-details-item">
+            <h4 class="detail-label">Balance</h4>
+            <p class="detail-value" contenteditable="true">$ 0.00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accounts-grid">
+      <div class="account-card">
+        <div class="account-details">
+          <div class="account-details-item">
+            <h4 class="detail-label">Account Name</h4>
+            <h3 class="detail-value">Personal Loan</h3>
+          </div>
+          <div class="account-details-item">
+            <h4 class="detail-label">Type</h4>
+            <p class="detail-value">Loan</p>
+          </div>
+          <div class="account-details-item">
+            <h4 class="detail-label">Balance</h4>
+            <p class="detail-value" contenteditable="true">$ 0.00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accounts-grid">
+      <div class="account-card">
+        <div class="account-details">
+          <div class="account-details-item">
+            <h4 class="detail-label">Account Name</h4>
+            <h3 class="detail-value">Business Account</h3>
+          </div>
+          <div class="account-details-item">
+            <h4 class="detail-label">Type</h4>
+            <p class="detail-value">Business</p>
+          </div>
+          <div class="account-details-item">
+            <h4 class="detail-label">Balance</h4>
+            <p class="detail-value" contenteditable="true">$ 0.00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </section>
+
+  <script src="home.js"></script>
+</body>
+</html>
