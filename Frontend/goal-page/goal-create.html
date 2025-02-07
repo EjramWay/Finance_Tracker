@@ -10,68 +10,87 @@
 </head>
 <body>
 
-    <header class="header">
-        <div class="logo">
-          <a href="/" class="logo-link">
-            <img class="logo-image" src="Logos/download (1).png" alt="logo">
-          </a>
-        </div>
-    
-        <nav class="nav-bar">
-          <ul class="nav-links">
-            <li><a href="home.html">Accounts</a></li>
-            <li><a href="#">Transactions</a></li>
-            <li><a href="#">Goals</a></li>
-          </ul>
-    
-    <a href="../transaction-page\transaction-add-page.html"><button id="transaction">+ Transaction</button></a>
-    
-          <button id="profile-btn" class="profile-btn">
-            <img src="SVGimages/profile-circle.svg" alt="profile-picture">
-          </button>
-    
-          <div id="nav-link-profile" class="nav-link-profile">
-            <ul class="profile-menu" id="profile-menu">
-              <li><a href="#">Profile</a></li>
-              <li><a href="#">Settings</a></li>
-              <li class="logout"><a href="#">Logout</a></li>
-            </ul>
-          </div>
-    
-          <button id="dropdown" class="dropdown-btn">
-            <img src="SVGimages/list (1).svg" alt="dropdown">
-          </button>
-          <ul class="dropdown-menu" id="dropdown-menu">
-            <li><a href="home.html">Accounts</a></li>
-            <li><a href="#">Transactions</a></li>
-            <li><a href="#">Goals</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-      </header>
+  <header class="header">
+    <div class="logo">
+      <a href="/" class="logo-link">
+        <img class="logo-image" src="Logos/download (1).png" alt="logo">
+      </a>
+    </div>
+
+    <nav class="nav-bar">
+      <ul class="nav-links">
+        <li><a href="../home.html">Accounts</a></li>
+        <li><a href="#">Transactions</a></li>
+        
+        <li><a href="../goal-page/goal-page.html">Goals</a></li>
+      </ul>
+
+<a href="../transaction-page\transaction-add-page.html"><button id="transaction">+ Transaction</button></a>
+
+
+      <button id="dropdown" class="dropdown-btn">
+        <img src="../SVGimages/list (1).svg" alt="dropdown">
+      </button>
+
+      <ul class="dropdown-menu" id="dropdown-menu">
+        <li><a href="../home.html">Accounts</a></li>
+        <li><a href="./goal-page.html">Goals</a></li>
+        <li><a href="#">Transactions</a></li>
+        <li><a href="../transaction-page/transaction-add-page.html">Add Transaction</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
 
     <section class="create-goal">
       <div class="parent-goal-create">  
 <h1 class="title-create">Create Goal</h1>
 <h4 class="title-desc-create">Input Your Info So It Displays in the Goal section</h2>   
 
-    <section class="transaction-add">
+    <!-- goal-create.html -->
+<section class="transaction-add">
+  <form id="goalForm">
     <h5>Goal Name</h5>
-    <input type="text" id="description-input" required>
+    <input type="text" id="goal-name" required>
     
     <h5>Description</h5>
-    <input type="text" id="account-input" required>
+    <input type="text" id="goal-description" required>
     
     <h5>Target Amount</h5>
-    <input type="text" id="reminder-input" required>
+    <input type="number" id="target-amount" required>
 
     <h5>Current Amount</h5>
-    <input type="text" id="reminder-input" required>
+    <input type="number" id="current-amount" required>
 
     <h5>Due Date</h5>
-    <input type="date" placeholder="Enter The Date" id="date-input" required>
+    <input type="date" id="due-date" required>
     
-    <button type="submit" id="submit-transaction">Submit</button>
+    <button type="submit" id="submit-transaction">Create Goal</button>
+  </form>
+</section>
+
+<script>
+document.getElementById('goalForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const goal = {
+    name: document.getElementById('goal-name').value,
+    description: document.getElementById('goal-description').value,
+    target: document.getElementById('target-amount').value,
+    current: document.getElementById('current-amount').value,
+    dueDate: document.getElementById('due-date').value,
+    id: Date.now().toString()
+  };
+
+  // Save to localStorage
+  const goals = JSON.parse(localStorage.getItem('goals') || '[]');
+  goals.push(goal);
+  localStorage.setItem('goals', JSON.stringify(goals));
+
+  window.location.href = 'goal-page.html';
+});
+</script>
 
 
 </section>

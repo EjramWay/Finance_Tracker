@@ -9,45 +9,37 @@
 </head>
 <body>
 
-    <header class="header">
-        <div class="logo">
-          <a href="/" class="logo-link">
-            <img class="logo-image" src="Logos/download (1).png" alt="logo">
-          </a>
-        </div>
-    
-        <nav class="nav-bar">
-          <ul class="nav-links">
-            <li><a href="home.html">Accounts</a></li>
-            <li><a href="#">Transactions</a></li>
-            <li><a href="#">Goals</a></li>
-          </ul>
-    
-    <a href="../transaction-page\transaction-add-page.html">      <button id="transaction">+ Transaction</button></a>
-    
-          <button id="profile-btn" class="profile-btn">
-            <img src="SVGimages/profile-circle.svg" alt="profile-picture">
-          </button>
-    
-          <div id="nav-link-profile" class="nav-link-profile">
-            <ul class="profile-menu" id="profile-menu">
-              <li><a href="#">Profile</a></li>
-              <li><a href="#">Settings</a></li>
-              <li class="logout"><a href="#">Logout</a></li>
-            </ul>
-          </div>
-    
-          <button id="dropdown" class="dropdown-btn">
-            <img src="SVGimages/list (1).svg" alt="dropdown">
-          </button>
-          <ul class="dropdown-menu" id="dropdown-menu">
-            <li><a href="home.html">Accounts</a></li>
-            <li><a href="#">Transactions</a></li>
-            <li><a href="#">Goals</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-      </header>
+  <header class="header">
+    <div class="logo">
+      <a href="/" class="logo-link">
+        <img class="logo-image" src="Logos/download (1).png" alt="logo">
+      </a>
+    </div>
+
+    <nav class="nav-bar">
+      <ul class="nav-links">
+        <li><a href="../home.html">Accounts</a></li>
+        <li><a href="#">Transactions</a></li>
+        
+        <li><a href="../goal-page/goal-page.html">Goals</a></li>
+      </ul>
+
+<a href="../transaction-page\transaction-add-page.html"><button id="transaction">+ Transaction</button></a>
+
+
+      <button id="dropdown" class="dropdown-btn">
+        <img src="../SVGimages/list (1).svg" alt="dropdown">
+      </button>
+
+      <ul class="dropdown-menu" id="dropdown-menu">
+        <li><a href="../home.html">Accounts</a></li>
+        <li><a href="../goal-page/goal-page.html">Goals</a></li>
+        <li><a href="#">Transactions</a></li>
+        <li><a href="transaction-add-page.html">Add Transaction</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
     <section class="transaction-add">
 <h1>Add new Transaction</h1>
@@ -76,4 +68,6 @@
     </section>
     
 </body>
+
+<script src="../home.js"></script>
 </html>

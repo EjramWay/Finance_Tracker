@@ -109,11 +109,11 @@
 
   @keyframes opening {
     from {
-      top: 51px;
+      top: 50px;
       opacity: 0;
     }
     to {
-      top: 51px;
+      top: 50px;
       opacity: 1;
     }
   }
@@ -153,7 +153,7 @@ to {
 
   .dropdown-menu.active {
     display: block;
-    top: 51px;
+    top: 50px;
     flex-direction: column;
     position: absolute;
     left: 0;
@@ -164,6 +164,7 @@ to {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     animation: opening 0.3s;
+    z-index: 9999;
   }
 
 
@@ -250,7 +251,7 @@ justify-items: center;
   display: none;
   position: absolute;
   right: 0;
-  top: 72px;
+  top: 85px;
   width: 90px;
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
@@ -260,25 +261,6 @@ justify-items: center;
   animation: opening-profile 0.3s;
 }
 
-
-.profile-menu {
-  text-align: right;
-  list-style: none;
-  padding: 0;
-}
-
-.profile-menu a {
-  padding: 2rem;
-  width: 100%;
-  text-decoration: none;
-  color: #333;
-
-  animation: opening-profile 0.3s;
-}
-
-.profile-menu a:hover {
-  color: #6c5ce7;
-}
 
 .active {
   display: block;
@@ -296,11 +278,11 @@ justify-items: center;
 
 @keyframes opening-profile {
   from {
-    top: 71px;
+    top: 74px;
     opacity: 0;
   }
   to {
-    top: 72px;
+    top: 85px;
     opacity: 1;
   }
 }

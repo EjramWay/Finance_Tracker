@@ -6,25 +6,30 @@ body {
     font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.transaction-add{
+.transaction-add {
     position: absolute;
     padding: 6px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 500px; /* Prevents it from being too wide */
 }
 
 h1 {
     text-align: center;
+    font-size: 1.5rem;
 }
 
 input {
     border: none;
     background-color: #f1f1f1;
-    border-radius: 2px;
-    padding: 8px 12px;
-    width: 449px;
+    border-radius: 4px;
+    padding: 10px 14px;
+    width: 100%; /* Responsive width */
+    max-width: 450px; /* Prevents stretching on large screens */
+    font-size: 16px;
 }
 
 input:hover {
@@ -33,16 +38,43 @@ input:hover {
 }
 
 #submit-transaction {
-margin-top: 7%;
-padding: 9px 12px;
-background-color: #7155F1;
-color: white;
-border: none;
-border-radius: 2px;
-font-size: 14px;
+    margin-top: 7%;
+    padding: 12px 16px;
+    background-color: #7155F1;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 450px;
 }
 
 #submit-transaction:hover {
-    background-color: rgba(113, 85, 241,0.9);
+    background-color: rgba(113, 85, 241, 0.9);
     cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .transaction-add {
+        width: 90%;
+        padding: 12px;
+    }
+
+    input, #submit-transaction {
+        font-size: 14px;
+        padding: 10px;
+        max-width: 100%; /* Full width on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    input, #submit-transaction {
+        font-size: 14px;
+        padding: 8px;
+    }
 }
