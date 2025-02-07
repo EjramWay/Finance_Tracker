@@ -71,26 +71,30 @@
 </section>
 
 <script>
-document.getElementById('goalForm').addEventListener('submit', function(e) {
-  e.preventDefault();
+  document.getElementById('goalForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const goal = {
+      name: document.getElementById('goal-name').value,
+      description: document.getElementById('goal-description').value,
+      target: document.getElementById('target-amount').value,
+      current: document.getElementById('current-amount').value,
+      dueDate: document.getElementById('due-date').value,
+      id: Date.now().toString()
+    };
   
-  const goal = {
-    name: document.getElementById('goal-name').value,
-    description: document.getElementById('goal-description').value,
-    target: document.getElementById('target-amount').value,
-    current: document.getElementById('current-amount').value,
-    dueDate: document.getElementById('due-date').value,
-    id: Date.now().toString()
-  };
-
-  // Save to localStorage
-  const goals = JSON.parse(localStorage.getItem('goals') || '[]');
-  goals.push(goal);
-  localStorage.setItem('goals', JSON.stringify(goals));
-
-  window.location.href = 'goal-page.html';
-});
-</script>
+    console.log('Goal being created:', goal); // Debug log
+  
+    // Save to localStorage
+    const goals = JSON.parse(localStorage.getItem('goals') || '[]');
+    goals.push(goal);
+    localStorage.setItem('goals', JSON.stringify(goals));
+  
+    console.log('Goals in localStorage:', JSON.parse(localStorage.getItem('goals'))); // Debug log
+  
+    window.location.href = 'goal-page.html';
+  });
+  </script>
 
 
 </section>
