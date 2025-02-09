@@ -228,75 +228,84 @@ body {
 
 /* Empty State Styles */
 .empty-state {
-    display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   min-height: 400px;
-  width: 1168px;
+  width: 100% !important;  /* Changed from fixed width to 100% */
+  max-width: 1168px;  /* Added max-width instead of fixed width */
+  margin: 0 auto;  /* Center the container */
   background-color: var(--white);
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .empty-state-content {
-    text-align: center;
-    padding: 2rem;
+  text-align: center;
+  padding: 2rem;
+  width: 100%;  /* Added to ensure content respects container width */
+  max-width: 600px;  /* Added to maintain reasonable reading width */
 }
 
 .empty-state-icon {
-    width: 120px;
-    height: 120px;
-    margin-bottom: 1.5rem;
-    opacity: 0.6;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 1.5rem;
+  opacity: 0.6;
 }
 
 .empty-state-content h2 {
-    color: var(--dark-gray);
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+  color: var(--dark-gray);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .empty-state-content p {
-    color: var(--gray-color);
-    margin-bottom: 1.5rem;
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
+  color: var(--gray-color);
+  margin-bottom: 1.5rem;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .empty-state-button {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background-color: var(--primary-color);
-    color: var(--white);
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
 }
 
 .empty-state-button:hover {
-    background-color: var(--primary-hover);
+  background-color: var(--primary-hover);
 }
 
 @media (max-width: 480px) {
-    .empty-state {
-        min-height: 300px;
-    }
+  .empty-state {
+      min-height: 300px;  /* Reduced minimum height for mobile */
+      padding: 1rem;  /* Added padding for smaller screens */
+  }
 
-    .empty-state-icon {
-        width: 80px;
-        height: 80px;
-    }
+  .empty-state-icon {
+      width: 80px;
+      height: 80px;
+  }
 
-    .empty-state-content h2 {
-        font-size: 1.25rem;
-    }
+  .empty-state-content {
+      padding: 1rem;  /* Reduced padding for mobile */
+  }
 
-    .empty-state-content p {
-        font-size: 0.9rem;
-    }
+  .empty-state-content h2 {
+      font-size: 1.25rem;
+  }
+
+  .empty-state-content p {
+      font-size: 0.9rem;
+      padding: 0 1rem;  /* Added horizontal padding for text readability */
+  }
 }
-
 /* Transaction Action Buttons */
 .transaction-actions {
     display: flex;
