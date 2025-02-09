@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../home-header.css">
+    <link rel="stylesheet" href="transactionpage.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+          <a href="/" class="logo-link">
+            <img class="logo-image" src="Logos/download (1).png" alt="logo">
+          </a>
+        </div>
+    
+        <nav class="nav-bar">
+          <ul class="nav-links">
+            <li><a href="../home.html">Accounts</a></li>
+            <li><a href="../transaction-page/transactionpage.html">Transactions</a></li>
+            
+            <li><a href="../goal-page/goal-page.html">Goals</a></li>
+          </ul>
+    
+    <a href="../transaction-page\transaction-add-page.html"><button id="transaction">+ Transaction</button></a>
+    
+    
+          <button id="dropdown" class="dropdown-btn">
+            <img src="../SVGimages/list (1).svg" alt="dropdown">
+          </button>
+    
+          <ul class="dropdown-menu" id="dropdown-menu">
+            <li><a href="../home.html">Accounts</a></li>
+            <li><a href="../goal-page/goal-page.html">Goals</a></li>
+            <li><a href="../transaction-page/transactionpage.html">Transactions</a></li>
+            <li><a href="../transaction-page/transaction-add-page.html">Add Transaction</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <section class="transac">
+        <div class="transac-parent">
+          <div class="title-transac">
+            <h1 class="title-transac-h1">Transaction</h1>
+            <h4 class="title-desc">Lists your day to day Transactions</h4>
+          </div>
+          <div class="transac-search">
+            <div class="search-container">
+              <img src="../SVGimages/search.svg" alt="Search Icon" class="search-icon" />
+              <input
+                type="search"
+                id="search-transac"
+                class="search-transac"
+                placeholder="Type here to search"
+              />
+            </div>
+            <a href="../transaction-page/transaction-add-page.html  ">
+              <button id="transac-create">Create Transaction</button>
+            </a>
+
+            <template id="transaction-card-template">
+                <div class="transaction-card">
+                    <div class="transaction-meta">
+                        <div class="transaction-date"></div>
+                        <div class="transaction-category"></div>
+                    </div>
+                    <div class="transaction-amount"></div>
+                    <div class="transaction-details">
+                        <div>
+                            <span>Account:</span>
+                            <span class="transaction-account"></span>
+                        </div>
+                        <div>
+                            <span>Description:</span>
+                            <span class="transaction-description"></span>
+                        </div>
+
+                    </div>
+                </div>
+            </template>
+        
+
+
+    
+</body>
+
+
+
+<script src="../home.js"></script>
+<script src="../transaction-page/transaction.js"></script>
+</html>

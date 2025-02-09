@@ -100,3 +100,82 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   }
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Form handling for goal-add-page
+  const form = document.getElementById('goal-form');
+  
+  if (form) {
+      form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          
+          try {
+              const goal = {
+                  name: document.getElementById('goal-name-input').value,
+                  amount: document.getElementById('goal-amount-input').value,
+                  date: document.getElementById('goal-date-input').value,
+                  description: document.getElementById('goal-description-input').value,
+                  id: Date.now()
+              };
+
+              const goals = JSON.parse(localStorage.getItem('goals') || '[]');
+              goals.push(goal);
+              localStorage.setItem('goals', JSON.stringify(goals));
+
+              window.location.href = 'goal-page.html';
+          } catch (error) {
+              console.error('Error processing form:', error);
+          }
+      });
+  }
+
+  // Goal card rendering for goal-page.html
+  const template = document.getElementById('goal-card-template');
+  const goalParent = document.querySelector('.goal-parent');
+  
+  if (template && goalParent) {
+      try {
+          const goals = JSON.parse(localStorage.getItem('goals') || '[]');
+          const container = document.createElement('div');
+          container.className = 'goal-cards';
+
+          if (goals.length === 0) {
+              // Create empty state message
+              const emptyState = document.createElement('div');
+              emptyState.className = 'empty-state';
+              emptyState.innerHTML = `
+                  <div class="empty-state-content">
+                      <img src="../SVGimages/target-svg.svg" alt="No goals" class="empty-state-icon">
+                      <h2>No Goals Set Yet</h2>
+                      <p>Start working towards your financial goals by setting your first target!</p>
+                      <a href="./goal-create.html" class="empty-state-button">Create Goal</a>
+                  </div>
+              `;
+              container.appendChild(emptyState);
+          } else {
+              goals.forEach(goal => {
+                  const clone = template.content.cloneNode(true);
+                  const card = clone.querySelector('.goal-card');
+                  
+                  // Add data-id attribute for identifying the goal
+                  card.dataset.id = goal.id;
+                  
+                  clone.querySelector('.goal-name').textContent = goal.name;
+                  clone.querySelector('.goal-amount').textContent = `$${goal.amount}`;
+                  clone.querySelector('.goal-date').textContent = new Date(goal.date).toLocaleDateString();
+                  clone.querySelector('.goal-description').textContent = goal.description;
+                  
+                  container.appendChild(clone);
+              });
+          }
+
+          goalParent.appendChild(container);
+      } catch (error) {
+          console.error('Error rendering goals:', error);
+      }
+  }
+});
+
+
+

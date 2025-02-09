@@ -19,7 +19,7 @@
     <nav class="nav-bar">
       <ul class="nav-links">
         <li><a href="../home.html">Accounts</a></li>
-        <li><a href="#">Transactions</a></li>
+        <li><a href="../transaction-page/transactionpage.html">Transactions</a></li>
         
         <li><a href="../goal-page/goal-page.html">Goals</a></li>
       </ul>
@@ -34,15 +34,20 @@
       <ul class="dropdown-menu" id="dropdown-menu">
         <li><a href="../home.html">Accounts</a></li>
         <li><a href="../goal-page/goal-page.html">Goals</a></li>
-        <li><a href="#">Transactions</a></li>
-        <li><a href="transaction-add-page.html">Add Transaction</a></li>
+        <li><a href="../transaction-page/transactionpage.html">Transactions</a></li>
+        <li><a href="../transaction-page/transaction-add-page.html">Add Transaction</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-    <section class="transaction-add">
-<h1>Add new Transaction</h1>
+
+<section class="transaction-add">
+
+
+  <form id="transaction-form">
+
+    <h1>Add new Transaction</h1>
 
 <h5>Date*</h5>
 <input type="date" placeholder="Enter The Date" id="date-input" required>
@@ -59,15 +64,35 @@
 <h5>Account*</h5>
 <input type="text" id="account-input" required>
 
-<h5>Reminder*</h5>
-<input type="text" id="reminder-input" required>
 
-<button type="submit" id="submit-transaction">Submit</button>
+      <button type="submit" id="submit-transaction">Submit</button>
+  </form>
+
+</section>
 
 
     </section>
+
+
+    <script>
+      // Wait for DOM to be fully loaded
+      document.addEventListener('DOMContentLoaded', () => {
+          // Only initialize dropdown functionality from home.js
+          const dropdownBtn = document.getElementById('dropdown');
+          const dropdownMenu = document.getElementById('dropdown-menu');
+          
+          if (dropdownBtn && dropdownMenu) {
+              dropdownBtn.addEventListener('click', () => {
+                  dropdownMenu.classList.toggle('show');
+              });
+          }
+      });
+    </script>
+    <script src="transaction.js"></script>
     
 </body>
+
+
 
 <script src="../home.js"></script>
 </html>
